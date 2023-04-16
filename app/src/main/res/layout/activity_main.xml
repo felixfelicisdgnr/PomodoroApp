@@ -7,98 +7,113 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/background_one"
+    android:background="@drawable/ui_background_one"
     >
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="59dp" />
+    <FrameLayout
+        android:id="@+id/flCountDownTimer"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="270dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="370dp" />
+       <ProgressBar
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_gravity="center"
+           android:indeterminate="false"
+           android:max="15"
+           android:progress="10"
+           android:rotation="90"
+           style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+           android:background="@drawable/background_progress_bar"
+           android:progressDrawable="@drawable/second_background_progress_bar"
+           >
+       </ProgressBar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tvPeriodTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/_0"
+                android:textStyle="italic"
+                android:textSize="26sp"
+                android:textColor="#BA7FC5"
+                android:gravity="center"/>
+            <TextView
+                android:id="@+id/tvLeftTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/time_left"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="#BA7FC5"/>
+        </LinearLayout>
+    </FrameLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="82dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="375dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="660dp" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="@android:style/Widget.Holo.Light.ProgressBar.Large"
-        android:layout_width="301dp"
-        android:layout_height="283dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.0" />
-
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="423dp" />
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/add_shape"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flCountDownTimer" />
 
     <TextView
-        android:id="@+id/tvTime"
-        android:layout_width="205dp"
-        android:layout_height="84dp"
-        android:text="00:00"
-        android:textAlignment="center"
-        android:textColor="#0B606B"
-        android:textColorHighlight="#0B606B"
-        android:textSize="62sp"
-        android:textStyle="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/progressBar"
-        app:layout_constraintEnd_toEndOf="@+id/progressBar"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        app:layout_constraintVertical_bias="0.482" />
+        android:id="@+id/tvBreakTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="160dp"
+        android:text="break time "
+        android:textColor="#BA7FC5"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/btnRestore"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="160dp"
+        android:background="@color/white"
+        android:scaleType="fitXY"
+        android:src="@drawable/restore_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnStartStop"
-        android:layout_width="163dp"
-        android:layout_height="42dp"
+        android:id="@+id/btnPlayPause"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:text="start"
+        android:textColor="#BA7FC5"
         android:background="@drawable/button_background"
-        android:text="@string/start_to_focus"
-        android:textAlignment="center"
-        android:textColor="@color/white"
+        android:textSize="25sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/guideline6"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.333">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
     </androidx.appcompat.widget.AppCompatButton>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
