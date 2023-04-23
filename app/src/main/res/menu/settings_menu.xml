@@ -3,24 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/work_time_item"
-        android:title="Change Work Time"
+        android:id="@+id/optionsMenu"
+        android:icon="@drawable/ic_settings"
+        android:title=""
+        app:showAsAction="always"
         >
 
-    </item>
-
-    <item
-        android:id="@+id/break_time_item"
-        android:title="Change Break Time"
-        >
-
-    </item>
-
-    <item
-        android:id="@+id/change_music_item"
-        android:title="Change Music">
+        <menu>
+            <item
+                android:id="@+id/settings_item_time"
+                android:title="@string/settings_time"
+                />
+        </menu>
 
     </item>
-
-
 </menu>
