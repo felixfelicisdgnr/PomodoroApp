@@ -28,5 +28,11 @@
     <string name="settings_time">Settings Time</string>
     <string name="deneme">deneme</string>
 
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_timer">Settings Timer</string>
+    <string name="points">...</string>
+    <string name="set_timer">set timer</string>
+    <string name="selected_time">The selected time is:</string>
+
 
 </resources>
