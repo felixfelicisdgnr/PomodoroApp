@@ -7,7 +7,7 @@
 
     <stroke
         android:width="3dp"
-        android:color="#0B606B"
+        android:color="#52A1E1"
         android:backgroundTint="@android:color/transparent"
     />
 

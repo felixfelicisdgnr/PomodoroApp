@@ -1,13 +1,11 @@
 package com.example.pomodoroapp
 
 
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.Toast
+import android.view.animation.AnimationUtils
 import com.example.pomodoroapp.databinding.ActivityTimeSettingsBinding
 
 
@@ -33,6 +31,7 @@ class SettingsTimeActivity : AppCompatActivity() {
         binding = ActivityTimeSettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         // Receive Extras
         studyMinute = intent.getIntExtra("study", 0) * 60 * 1000
         breakMinute = intent.getIntExtra("break", 0) * 60 * 1000
@@ -53,22 +52,6 @@ class SettingsTimeActivity : AppCompatActivity() {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.settings_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId) {
-            R.id.settings_item_time -> {
-                Toast.makeText(this, "Settings Selected", Toast.LENGTH_LONG).show()
-                // Start the SettingsActivity
-                val intent = Intent(this, SettingsTimeActivity::class.java)
-                startActivity(intent)
-            }
-        }
-        return super.onOptionsItemSelected(item)
-    }
 
     // Convert Received Numbers to Minutes and Seconds, Calculate Current Timer
     private fun updateTimer(time : Int): String {
@@ -88,6 +71,12 @@ class SettingsTimeActivity : AppCompatActivity() {
     // Set Rest Timer
     private fun setRestTimer(){
 
+        val animSett = AnimationUtils.loadAnimation(this,R.anim.translation_anim_deneme)
+        binding.tvStatus.startAnimation(animSett)
+
+        val animProgress = AnimationUtils.loadAnimation(this,R.anim.scale_anim_one)
+        binding.frameLayout.startAnimation(animProgress)
+
         val roundCountText = String.format("%s / %s", manuelRound, roundCount)
 
         binding.tvRound.text = roundCountText
@@ -95,7 +84,7 @@ class SettingsTimeActivity : AppCompatActivity() {
         binding.progressBar.progress = 0
         binding.progressBar.max = 2
 
-        restTimer = object : CountDownTimer(10500,1000) {
+        restTimer = object : CountDownTimer(5000,1000) {
             override fun onTick(p0: Long) {
                 binding.progressBar.progress = (p0 / 1000).toInt()
                 binding.tvTimer.text = (p0 / 1000).toString()
@@ -113,6 +102,12 @@ class SettingsTimeActivity : AppCompatActivity() {
 
     // Set Study Timer
     private fun setStudyTimer(){
+
+        val animSett = AnimationUtils.loadAnimation(this,R.anim.translation_anim_1000)
+        binding.tvStatus.startAnimation(animSett)
+
+        val animProgress = AnimationUtils.loadAnimation(this,R.anim.scale_anim_one)
+        binding.frameLayout.startAnimation(animProgress)
 
         studyTimer = object : CountDownTimer(studyMinute!!.toLong() + 500,1000) {
             override fun onTick(p0: Long) {
@@ -134,6 +129,13 @@ class SettingsTimeActivity : AppCompatActivity() {
 
     // Set Break Timer
     private fun setBreakTimer() {
+
+        val animSett = AnimationUtils.loadAnimation(this,R.anim.translation_anim_1000)
+        binding.tvStatus.startAnimation(animSett)
+
+        val animProgress = AnimationUtils.loadAnimation(this,R.anim.scale_anim_one)
+        binding.frameLayout.startAnimation(animProgress)
+
         breakTimer = object : CountDownTimer(breakMinute!!.toLong()+500, 1000 ) {
             override fun onTick(p0: Long) {
                 binding.progressBar.progress = (p0 / 1000).toInt()

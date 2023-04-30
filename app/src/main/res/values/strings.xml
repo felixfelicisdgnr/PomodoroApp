@@ -17,7 +17,7 @@
     <string name="work_time">WORK TIME</string>
     <string name="set_work_time">SET WORK TIME</string>
     <string name="go_homepage">Go HomePage</string>
-    <string name="what_is_pomodoro">What is Pomodoro?</string>
+    <string name="what_is_pomodoro">What ıs Pomodoro?</string>
     <string name="go_github">GO GITHUB</string>
     <string name="minutes">Minutes</string>
     <string name="set_break_time">SET BREAK TIME</string>
@@ -31,7 +31,7 @@
     <string name="set_timer">set timer</string>
     <string name="selected_time">The selected time is:</string>
     <string name="get_ready">Get Ready</string>
-    <string name="set_finish_rounds">You have finish your rounds :)</string>
+    <string name="set_finish_rounds">You have finish your rounds!</string>
     <string name="study_time">Study Time</string>
     <string name="press_button">Press Play Button to Restart</string>
     <string name="welcome_to_pomodoro_app">Welcome to Pomodoro App</string>

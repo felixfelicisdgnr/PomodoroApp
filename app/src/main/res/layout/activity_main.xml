@@ -8,27 +8,28 @@
     android:background="@drawable/ui_background_one"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/tvWelcomeApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="35dp"
         android:text="@string/welcome_to_pomodoro_app"
-        android:textColor="#C874D6"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:textColor="#1C83D5"
+        android:textSize="27sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
     <LinearLayout
         android:id="@+id/linearLayoutAllTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="80dp"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -94,7 +95,6 @@
 
     </LinearLayout>
 
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnStart"
         android:layout_width="150dp"
@@ -102,9 +102,9 @@
         android:background="@drawable/button_background"
         android:gravity="center"
         android:text="@string/start"
-        android:textColor="#C874D6"
+        android:textColor="#1C83D5"
         android:textSize="25sp"
-        android:textStyle="bold"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/guidelineSettings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.77" />
+        app:layout_constraintGuide_percent="0.78" />
 
     <LinearLayout
         android:id="@+id/linearLayoutLast"
@@ -124,27 +124,29 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.582"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guidelineSettings"
-        app:layout_constraintVertical_bias="0.783">
+        app:layout_constraintVertical_bias="0.584">
 
-        <Button
-            android:id="@+id/btnGoHomepage"
-
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnWhatIsPomodoro"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/go_homepage"
-            style="?android:attr/buttonBarButtonStyle"/>
+            android:background="@drawable/button_background"
+            android:backgroundTint="#91CBFA"
+            android:text="@string/what_is_pomodoro"
+            android:textColor="#1C83D5"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnGoGithub"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:backgroundTint="#f66a0a"
+            android:background="@drawable/button_background"
             android:text="@string/go_github"
-            style="?android:attr/buttonBarButtonStyle"/>
+            android:textColor="#1C83D5"/>
     </LinearLayout>
 
 
