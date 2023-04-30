@@ -9,9 +9,6 @@
     <string name="_00">00</string>
     <string name="okay">OKAY</string>
     <string name="title_activity_settings">SettingsActivity</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
@@ -33,6 +30,16 @@
     <string name="points">...</string>
     <string name="set_timer">set timer</string>
     <string name="selected_time">The selected time is:</string>
+    <string name="get_ready">Get Ready</string>
+    <string name="set_finish_rounds">You have finish your rounds :)</string>
+    <string name="study_time">Study Time</string>
+    <string name="press_button">Press Play Button to Restart</string>
+    <string name="welcome_to_pomodoro_app">Welcome to Pomodoro App</string>
+    <string name="study_time_in_minute">Study Time in minute</string>
+    <string name="break_time_in_minute">Break Time in minute</string>
+    <string name="round_time">Round Time</string>
+    <string name="_1_5">1/5</string>
+    <string name="_10">10</string>
 
 
 </resources>
